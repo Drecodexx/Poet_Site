@@ -1,32 +1,43 @@
-{# extends "base.html" #}
+<section id="hero" class="d-flex align-items-center">
 
-{% block content %}
-<div className="SectionHome1 justify-content-center Section1 borders-r">
-    <div>
-    </div>
-
-    
-    <div className="SectionHome1">
-    <div className=" col-lg-6 col-sm-6 col-md-12 borders-r">
-      
-    <text class="t1"> Get the best of poetry Exclusively at poetsite.com<br/></text>
-            <text className="textBoxSection">
-             <span class="t2">Hi there<br/></span>
-             <span class="t3"> NJUME ARTHUR </span>
-             <span class="t4">here<br/></span>
-             <span class="t5"> your </span>
-             <span class="t6">poetryPlug</span>
-             </text>
-             <br/>
-             <button type="button" class="ActionBTN btn btn-outline-danger">hire me</button>
-</div>
-          <div className=" Image-div col-lg-6 col-sm-6 col-md-12 borders-r">
-      {% load static %}
-      <img className="img-fluid " alt="vector image1"  src="{% static '/assets/img1.png'%}" /> 
-
-    </div>
-    
+  <div class="container">
+    <div class="row">
+      <div class="textsection col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
+        <div class="container">
+          <h1> Hi there I'm Arthur Njume your poetry plug</h1>
+          <h2 class="t1 ">Get the best of poetry Exclusively at poetsite.com</h2>
+          <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img">
+        {% load static %}
+        <img className="img-fluid animated " alt="vector image1" src="{% static '/assets/img1.png' %}" />
+      </div>
     </div>
   </div>
 
-{% endblock content %}
+</section>
+
+<section id="hero" class="d-flex align-items-center">
+
+  <div class="container">
+    <div class="row">
+      <div class="textsection col-lg-6 pt-5 pt-lg-0 order-2 order-lg-2">
+        <div class="container">
+          <h1> Hi there I have been
+            doing freelance
+            writing for
+            14 years</h1>
+          <a href="#about" class="btn-get-started scrollto">Hire me</a>
+        </div>
+      </div>
+      <div class="textsection col-lg-6 order-1 order-lg-1 hero-img">
+        {% load static %}
+        <img className="img-fluid animated " alt="vector image1" src="{% static '/assets/img2.png' %}" />
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
