@@ -8,8 +8,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('summernote/', include('django_summernote.urls')),
-    path('api/poems/', include('poems.urls')),
+    path('poems/', include('poems.urls')),
     path('admin/', admin.site.urls),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-urlpatterns += [re_path(r'^.*', TemplateView.as_view(template_name='index.html'))]
+urlpatterns += [re_path(r'^.*', TemplateView.as_view(template_name='base.html'))]

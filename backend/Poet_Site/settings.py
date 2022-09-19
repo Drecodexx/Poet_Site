@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^v#$ftm0$#j11x2_dbeg5jlfzg1z8*^vp*x-ys+ju9ohtq7&b%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1' ]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','' ]
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'django_summernote',
+    'Poet_Site',
     'poems'
 ]
 
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'Poet_Site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r"C:\Users\IDRIS\Desktop\Poetsite\Poet_Site\backend\frontend\build"],
+         'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,13 +73,15 @@ TEMPLATES = [
         },
     },
 ]
+
 ROOTDIR = os.path.abspath(os.path.dirname(__file__)) 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    ROOTDIR + 'Poet_Site/backend/Poet_Site/index.html',
+    ROOTDIR + 'Poet_Site/backend/Poet_Site/base.html',
 )
+
 WSGI_APPLICATION = 'Poet_Site.wsgi.application'
 
 
@@ -128,16 +131,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'build/static')
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -159,5 +159,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
 ]
+
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

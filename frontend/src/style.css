@@ -1,0 +1,51 @@
+.Section1{
+  padding-top: calc();
+}
+
+.Image-div{
+  background-image: url("./images/Asset 4.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 70% 100%;
+
+}
+
+.Image-div > img{
+  height: 60%;
+}
+
+.borders-b{
+  border: 1px solid blueviolet;
+}
+
+.borders-r{
+  border: 1px solid red;
+}
+@media (max-width:393px) {
+ 
+  
+  }
+  
+@media (max-width:768px) {
+  
+  }
+  
+@media (max-width:992px) {
+  
+  }
+  
+@media (min-width:1200px) {
+  .Image-div{
+    background-image: url("./images/Asset 4.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100% 100%;
+  
+  }
+  .section1Main{
+    display: flex;
+    flex-direction: row;
+  }
+  }
+  
+  

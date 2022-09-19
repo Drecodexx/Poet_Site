@@ -6,7 +6,7 @@ function Navbar(){
 
     return(
 
-        <div class=''>
+        <div class='MynavBar'>
             <nav class="MyNavbar navbar navbar-expand navbar-collapse  container-fluid">
                 <div class="logo container-fluid">
                     <div>
